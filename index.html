@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Workshop Quiz Arena</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:#101426;color:#fff;min-height:100vh}
+.app{width:min(1200px,94vw);margin:auto;padding:28px 0 40px}
+header{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:24px}
+h1{font-size:clamp(30px,5vw,58px);margin:0}.sub{color:#aeb8d2;margin-top:8px}
+.badge{padding:10px 15px;border:1px solid #38415d;border-radius:999px;color:#cbd5ff}
+nav{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+button{font:inherit;cursor:pointer}.tab,.btn{border:1px solid #39435f;background:#1a2035;color:#fff;border-radius:12px;padding:13px 18px;font-weight:700}
+.tab.active,.btn.primary{background:#5967ff;border-color:#5967ff}
+.card{background:#181e31;border:1px solid #303952;border-radius:20px;padding:clamp(22px,4vw,42px)}
+.meta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#aeb8d2;margin-bottom:25px}
+.question{font-size:clamp(25px,4vw,46px);line-height:1.18;margin:0 0 25px}
+.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.option{min-height:72px;text-align:left;font-size:clamp(16px,2vw,22px);border:1px solid #3b4665;background:#20273d;color:#fff;border-radius:14px;padding:15px 18px}
+.option:hover{border-color:#7783ff}.correct{background:#123b2b!important;border-color:#39c58a!important}.wrong{background:#452329!important;border-color:#f06b79!important}
+.feedback{min-height:30px;margin-top:20px;font-size:18px;font-weight:700}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.score{font-size:18px;color:#cbd5ff}.panel.hidden{display:none}
+.puzzle-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:22px 0}.sequence{padding:18px;border:1px dashed #536080;border-radius:14px;color:#dce2f5;line-height:1.7}
+.timer{font-size:clamp(36px,6vw,70px);font-weight:900;text-align:center;margin:15px 0}.center{text-align:center}
+@media(max-width:700px){.options,.puzzle-grid{grid-template-columns:1fr}header{align-items:flex-start;flex-direction:column}.app{padding-top:18px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+<div><h1>🎯 Workshop Quiz Arena</h1><div class="sub">Sample interactive projector game • Robotics / ROS 2</div></div>
+<div class="badge">LIVE WORKSHOP</div>
+</header>
+
+<nav aria-label="Rounds">
+<button class="tab active" data-panel="quiz">🧠 Quiz</button>
+<button class="tab" data-panel="puzzle">🧩 Puzzle</button>
+<button class="tab" data-panel="rapid">⚡ Rapid Fire</button>
+</nav>
+
+<section id="quiz" class="panel">
+<div class="card">
+<div class="meta"><span id="qcount">Question 1 / 5</span><span class="score">Score: <b id="score">0</b></span></div>
+<h2 class="question" id="question"></h2>
+<div class="options" id="options"></div>
+<div class="feedback" id="feedback" aria-live="polite"></div>
+<div class="actions"><button class="btn primary" id="next" hidden>Next Question →</button><button class="btn" id="restart">Restart</button></div>
+</div>
+</section>
+
+<section id="puzzle" class="panel hidden">
+<div class="card">
+<div class="meta"><span>TEAM PUZZLE</span><span>Build the pipeline</span></div>
+<h2 class="question">Put these in the correct order.</h2>
+<p class="sub">Think: physical sensor → ROS processing → communication → visualization.</p>
+<div class="puzzle-grid" id="puzzleItems"></div>
+<div class="sequence"><b>Your sequence:</b> <span id="sequence">—</span></div>
+<div class="feedback" id="puzzleFeedback"></div>
+<div class="actions"><button class="btn primary" id="checkPuzzle">Check Answer</button><button class="btn" id="resetPuzzle">Reset</button></div>
+</div>
+</section>
+
+<section id="rapid" class="panel hidden">
+<div class="card center">
+<div class="meta"><span>⚡ RAPID FIRE</span><span>30 seconds per question</span></div>
+<div class="timer" id="timer">30</div>
+<h2 class="question" id="rapidQuestion"></h2>
+<div class="actions" style="justify-content:center"><button class="btn primary" id="reveal">Reveal Answer</button><button class="btn" id="rapidNext">Next</button><button class="btn" id="startTimer">Start Timer</button></div>
+<div class="feedback" id="rapidAnswer" hidden></div>
+</div>
+</section>
+</div>
+
+<script>
+const quiz=[
+["Which tool is commonly used to visualize ROS 2 data?",["RViz","Git","Docker","Jenkins"],0],
+["What does a ROS 2 topic carry?",["Messages","Electric power","Files only","Passwords"],0],
+["What does LiDAR primarily measure?",["Distance","Temperature","Sound volume","CPU speed"],0],
+["What is a ROS 2 node?",["A process that performs computation and communicates","A cable","A sensor lens","A map"],0],
+["Why are coordinate frames important?",["They describe the position/orientation of data","They increase battery life","They replace topics","They compile programs"],0]
+];
+let qi=0,score=0,answered=false;
+const $=id=>document.getElementById(id);
+function renderQuiz(){
+$("qcount").textContent=`Question ${qi+1} / ${quiz.length}`;$("score").textContent=score;
+$("question").textContent=quiz[qi][0];$("options").innerHTML="";$("feedback").textContent="";$("next").hidden=true;answered=false;
+quiz[qi][1].forEach((x,i)=>{let b=document.createElement("button");b.className="option";b.textContent=x;b.onclick=()=>answer(i,b);$("options").appendChild(b)});
+}
+function answer(i,b){
+if(answered)return;answered=true;let q=quiz[qi];
+[...$("options").children].forEach((x,j)=>{x.disabled=true;if(j===q[2])x.classList.add("correct")});
+if(i===q[2]){score++;$("feedback").textContent="✅ Correct!";}else{$("feedback").textContent="❌ Not quite. The correct answer is "+q[1][q[2]];b.classList.add("wrong")}
+$("score").textContent=score;$("next").hidden=false;
+}
+$("next").onclick=()=>{if(++qi<quiz.length)renderQuiz();else{$("question").textContent=`🏆 Final Score: ${score}/${quiz.length}`;$("options").innerHTML="";$("feedback").textContent=score===quiz.length?"Perfect score!":"Great job — try again to beat your score!";$("next").hidden=true;$("qcount").textContent="Complete"}};
+$("restart").onclick=()=>{qi=0;score=0;renderQuiz()};renderQuiz();
+
+const pieces=["LiDAR Sensor","ROS 2 Node","Topic / Message","RViz Display"],correct=pieces.slice();let seq=[];
+function renderPuzzle(){$("puzzleItems").innerHTML="";pieces.forEach(x=>{let b=document.createElement("button");b.className="option";b.textContent=x;b.onclick=()=>{if(!seq.includes(x)){seq.push(x);$("sequence").textContent=seq.join(" → ")}};$("puzzleItems").appendChild(b)})}
+$("checkPuzzle").onclick=()=>{$("puzzleFeedback").textContent=seq.length===4&&seq.every((x,i)=>x===correct[i])?"🏆 Correct pipeline!":"❌ Try again — start with the physical sensor."};
+$("resetPuzzle").onclick=()=>{seq=[];$("sequence").textContent="—";$("puzzleFeedback").textContent=""};renderPuzzle();
+
+const rapid=[
+["What does RViz help engineers do?","Visualize robot data such as scans, frames and maps."],
+["What is a ROS 2 topic?","A named communication channel carrying messages between nodes."],
+["What can LiDAR detect?","Distances to surrounding surfaces and objects."],
+["Name one robot sensor besides LiDAR.","Camera, IMU, encoder, GPS or ultrasonic sensor."]
+];let ri=0,timer=30,interval=null;
+function rapidRender(){$("rapidQuestion").textContent=rapid[ri][0];$("rapidAnswer").hidden=true;$("timer").textContent=30;timer=30}
+$("reveal").onclick=()=>{$("rapidAnswer").textContent="Answer: "+rapid[ri][1];$("rapidAnswer").hidden=false};
+$("rapidNext").onclick=()=>{ri=(ri+1)%rapid.length;rapidRender()};
+$("startTimer").onclick=()=>{clearInterval(interval);timer=30;$("timer").textContent=timer;interval=setInterval(()=>{timer--;$("timer").textContent=timer;if(timer<=0){clearInterval(interval);$("rapidAnswer").textContent="⏰ Time!";$("rapidAnswer").hidden=false}},1000)};
+rapidRender();
+
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));t.classList.add("active");document.querySelectorAll(".panel").forEach(p=>p.classList.add("hidden"));$(t.dataset.panel).classList.remove("hidden")});
+</script>
+</body>
+</html>
