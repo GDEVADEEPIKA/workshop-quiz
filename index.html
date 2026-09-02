@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Engineering Quiz</title><style>
-*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:#fff;color:#172033}header{padding:22px 6%;border-bottom:1px solid #e8edf5;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:#fff;z-index:5}.brand{font-weight:900;font-size:22px}.brand span{color:#2878ff}.sound{border:1px solid #dbe3ef;background:#f7f9fc;border-radius:999px;padding:10px 14px;cursor:pointer}.hero{padding:50px 6% 35px;background:linear-gradient(135deg,#f7fbff,#fff);text-align:center}.hero h1{font-size:clamp(32px,6vw,60px);margin:0 0 12px}.hero p{font-size:18px;color:#5c677a}.tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding:22px}.tab{border:0;border-radius:14px;padding:13px 22px;font-weight:800;cursor:pointer;background:#eef4ff;color:#2468d8}.tab.active{background:#2878ff;color:#fff}.wrap{max-width:1050px;margin:auto;padding:20px 20px 70px}.card{border:1px solid #e4e9f2;border-radius:24px;padding:28px;background:#fff;box-shadow:0 12px 35px rgba(30,50,90,.07)}.progress{height:9px;background:#edf1f7;border-radius:9px;overflow:hidden;margin:15px 0 28px}.progress i{display:block;height:100%;background:#2878ff;width:0;transition:.3s}.qtitle{font-size:26px;font-weight:850;line-height:1.25}.options{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:22px}.opt{border:2px solid #e4eaf3;border-radius:18px;padding:0;overflow:hidden;background:#fff;cursor:pointer;text-align:left;transition:.18s}.opt:hover{transform:translateY(-2px);border-color:#8cb8ff}.opt.selected{border-color:#2878ff;box-shadow:0 0 0 3px #dceaff}.opt img{display:block;width:100%;height:145px;object-fit:cover;background:#f5f8fc}.opt b{display:block;padding:15px;font-size:16px}.actions{display:flex;justify-content:space-between;gap:12px;margin-top:25px}.btn{border:0;border-radius:13px;padding:13px 19px;font-weight:800;cursor:pointer}.primary{background:#2878ff;color:#fff}.secondary{background:#edf2f8;color:#26344b}.feedback{margin-top:18px;padding:15px;border-radius:14px;background:#f4f8ff;display:none}.puzzle-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.puzzle{border:1px solid #e4e9f2;border-radius:20px;padding:20px}.puzzle h3{margin-top:0}.puzzle .choices{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}.chip{border:1px solid #d7dfeb;background:#f9fbfd;border-radius:12px;padding:10px 13px;cursor:pointer}.chip:hover{border-color:#2878ff}.result{text-align:center;padding:35px}.score{font-size:48px;font-weight:900;color:#2878ff}.rapid{text-align:center}.timer{font-size:58px;font-weight:900;margin:10px}.rapidbox{padding:30px;border-radius:22px;background:#f7faff;border:1px solid #e2ebf8}.small{color:#6a7486;font-size:14px}@media(max-width:700px){.options,.puzzle-grid{grid-template-columns:1fr}.hero{padding-top:35px}.card{padding:20px}.opt img{height:130px}}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:#fff;color:#172033}header{padding:22px 6%;border-bottom:1px solid #e8edf5;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:#fff;z-index:5}.brand{font-weight:900;font-size:22px}.brand span{color:#2878ff}.sound{border:1px solid #dbe3ef;background:#f7f9fc;border-radius:999px;padding:10px 14px;cursor:pointer}.hero{padding:50px 6% 35px;background:linear-gradient(135deg,#f7fbff,#fff);text-align:center}.hero h1{font-size:clamp(32px,6vw,60px);margin:0 0 12px}.hero p{font-size:18px;color:#5c677a}.tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding:22px}.tab{border:0;border-radius:14px;padding:13px 22px;font-weight:800;cursor:pointer;background:#eef4ff;color:#2468d8}.tab.active{background:#2878ff;color:#fff}.wrap{max-width:1050px;margin:auto;padding:20px 20px 70px}.card{border:1px solid #e4e9f2;border-radius:24px;padding:28px;background:#fff;box-shadow:0 12px 35px rgba(30,50,90,.07)}.progress{height:9px;background:#edf1f7;border-radius:9px;overflow:hidden;margin:15px 0 28px}.progress i{display:block;height:100%;background:#2878ff;width:0;transition:.3s}.qtitle{font-size:26px;font-weight:850;line-height:1.25}.options{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:22px}.opt{border:2px solid #e4eaf3;border-radius:18px;padding:0;overflow:hidden;background:#fff;cursor:pointer;text-align:left;transition:.18s}.opt:hover{transform:translateY(-2px);border-color:#8cb8ff}.opt.selected{border-color:#2878ff;box-shadow:0 0 0 3px #dceaff}.opt img{display:block;width:100%;height:145px;object-fit:cover;background:#f5f8fc}.opt b{display:block;padding:15px;font-size:16px}.actions{display:flex;justify-content:space-between;gap:12px;margin-top:25px}.btn{border:0;border-radius:13px;padding:13px 19px;font-weight:800;cursor:pointer}.primary{background:#2878ff;color:#fff}.secondary{background:#edf2f8;color:#26344b}.feedback{margin-top:18px;padding:15px;border-radius:14px;background:#f4f8ff;display:none padding:16px 20px; line-height:1.5; font-size:16px; margin-top:14px;}.puzzle-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.puzzle{border:1px solid #e4e9f2;border-radius:20px;padding:20px}.puzzle h3{margin-top:0}.puzzle .choices{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}.chip{border:1px solid #d7dfeb;background:#f9fbfd;border-radius:12px;padding:10px 13px;cursor:pointer}.chip:hover{border-color:#2878ff}.result{text-align:center;padding:35px}.score{font-size:48px;font-weight:900;color:#2878ff}.rapid{text-align:center}.timer{font-size:58px;font-weight:900;margin:10px}.rapidbox{padding:30px;border-radius:22px;background:#f7faff;border:1px solid #e2ebf8}.small{color:#6a7486;font-size:14px}@media(max-width:700px){.options,.puzzle-grid{grid-template-columns:1fr}.hero{padding-top:35px}.card{padding:20px}.opt img{height:130px}}
 .puzzle-svg{width:100%;height:150px;display:block}.puzzle-visual{border-radius:14px;overflow:hidden;background:#f7fbff}\n</style>
 <style>
 .quiz-type-badge{
@@ -95,9 +95,156 @@ body{background:#fff;color:#17233b}
  .qnum{height:48px}
  .quiz-footer{font-size:12px}
 }
+
+.review-page{max-width:1050px;margin:0 auto;padding:28px}
+.review-title{display:flex;justify-content:space-between;align-items:center;gap:20px;border-bottom:1px solid #e4e9f2;padding-bottom:20px;margin-bottom:18px}
+.review-title h2{margin:12px 0 6px;font-size:30px}
+.review-title p{margin:0;color:#65738b}
+.review-score{font-size:32px;font-weight:800;padding:14px 20px;border-radius:16px;background:#f4f7ff}
+.review-list{display:grid;gap:14px}
+.review-card{border:1px solid #dfe6f1;border-radius:16px;padding:18px 20px;background:#fff}
+.review-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.review-question{font-size:18px;font-weight:700;line-height:1.45;margin-bottom:14px}
+.review-line{display:flex;justify-content:space-between;gap:18px;padding:9px 12px;border-radius:9px;background:#f7f9fc;margin-top:7px}
+.review-line span{color:#66748b}
+.correct-line{background:#effcf4}
+.review-status{padding:5px 10px;border-radius:999px;font-size:13px;font-weight:700}
+.review-status.correct{color:#187642;background:#eaf8ef}
+.review-status.wrong{color:#c33b3b;background:#fff0f0}
+.review-status.unanswered{color:#68758a;background:#f0f3f7}
+@media(max-width:700px){.review-title{align-items:flex-start;flex-direction:column}.review-line{flex-direction:column;gap:4px}}
+
+.puzzle-page{max-width:1180px;margin:0 auto;padding:24px}
+.puzzle-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.puzzle-counter{font-weight:800;font-size:18px}
+.puzzle-progress{width:420px;height:8px;background:#e8edf5;border-radius:99px;margin-top:10px;overflow:hidden}
+.puzzle-progress span{display:block;height:100%;background:#2878ff;border-radius:99px}
+.puzzle-main{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:18px}
+.puzzle-content,.puzzle-side{border:1px solid #dfe6f1;border-radius:18px;background:#fff;padding:24px}
+.puzzle-visual{width:100%;margin-bottom:18px}
+.puzzle-svg{display:block;width:100%;height:230px;border-radius:16px}
+.puzzle-content h2{font-size:27px;margin:8px 0}
+.puzzle-question{font-size:18px;line-height:1.5;margin-bottom:20px}
+.puzzle-choices{display:grid;gap:12px}
+.puzzle-option{width:100%;text-align:left;font-size:18px;padding:17px 20px;min-height:58px}
+.puzzle-option.correct-option{border-color:#35a866;background:#effaf3;color:#13763f}
+.puzzle-option.wrong-option{border-color:#ef5555;background:#fff1f1;color:#b42323}
+.puzzle-feedback{margin-top:18px;padding:17px 20px;border-radius:14px;font-size:16px;line-height:1.5}
+.p-correct{background:#effaf3;border:1px solid #a9dfbd;color:#13763f}
+.p-wrong{background:#fff1f1;border:1px solid #f0b1b1;color:#b42323}
+.p-correct-answer{margin-top:7px}
+.puzzle-actions{display:flex;justify-content:space-between;align-items:center;margin-top:20px;gap:12px}
+.puzzle-hint{color:#68758a;font-size:14px}
+.puzzle-side h3{margin-top:0;font-size:20px}
+.puzzle-nav{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.puzzle-nav button{height:50px;border:1px solid #d9e1ed;background:#fff;border-radius:12px;font-size:17px;font-weight:800;cursor:pointer}
+.puzzle-nav button.current-puzzle{border:2px solid #2878ff;color:#2878ff}
+.puzzle-nav button.done-correct{border-color:#39aa68;color:#21804a;background:#f0faf4}
+.puzzle-nav button.done-wrong{border-color:#ef4d4d;color:#c62828;background:#fff1f1}
+.puzzle-legend{margin-top:22px;padding:15px;border:1px solid #e3e8f0;border-radius:14px;display:grid;gap:10px;color:#53627a;font-size:14px}
+.puzzle-finish{max-width:1050px;margin:20px auto;padding:30px;text-align:center}
+.puzzle-finish .score{font-size:50px;font-weight:900}
+.puzzle-review{text-align:left;margin:25px 0}
+.p-review{display:grid;grid-template-columns:1fr auto;gap:5px 16px;padding:13px 15px;border:1px solid #e0e6ef;border-radius:12px;margin:9px 0}
+.p-review small{grid-column:1/-1;color:#526078}
+.pr-correct{background:#f0faf4}.pr-wrong{background:#fff2f2}.pr-unanswered{background:#f7f9fc}
+@media(max-width:850px){.puzzle-main{grid-template-columns:1fr}.puzzle-side{order:2}.puzzle-progress{width:260px}}
+
+.interaction-label{display:inline-block;margin:6px 0 8px;padding:8px 12px;border-radius:10px;background:#eef4ff;color:#263fbd;font-weight:900;font-size:13px;letter-spacing:.5px}
+.interaction-help{color:#5d6b80;margin:0 0 15px}
+.drag-bank{display:grid;gap:10px;margin-bottom:14px}
+.drag-item{display:flex;justify-content:space-between;align-items:center;padding:16px 18px;border:2px dashed #cdd7e5;border-radius:13px;background:#fff;font-size:17px;font-weight:700;cursor:grab}
+.drag-item:active{cursor:grabbing}
+.drag-item span{color:#8995a7;font-size:22px}
+.drop-zone{min-height:72px;border:3px dashed #9bbcf7;border-radius:15px;background:#f6f9ff;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;font-size:17px;color:#55709c}
+.drop-zone strong{color:#173c8f}
+.small-submit{margin-top:14px}
+.slider-wrap{padding:18px;border:1px solid #dbe3ef;border-radius:15px;background:#fafcff}
+.slider-wrap input{width:100%;height:12px;accent-color:#2878ff;cursor:pointer}
+.slider-labels{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:13px}
+.slider-labels span{text-align:center;font-weight:900}
+.slider-labels small{display:block;font-size:13px;font-weight:600;line-height:1.25;margin-top:4px}
+.slider-value{text-align:center;margin-top:15px;color:#526078}
+.check-list{display:grid;gap:11px}
+.check-row{display:flex;align-items:center;gap:13px;padding:16px 18px;border:2px solid #dce4ef;border-radius:13px;background:#fff;font-size:17px;font-weight:700;cursor:pointer}
+.check-row input{width:22px;height:22px;accent-color:#2878ff}
+.answered-box{border:1px solid #dbe3ee;border-radius:15px;padding:18px;background:#fafcff}
+.your-answer{font-size:17px;margin-bottom:10px}
+.answer-good{display:inline-block;color:#147b43;background:#eaf8f0;border:1px solid #a8ddbd;padding:7px 11px;border-radius:9px;font-weight:900}
+.answer-bad{display:inline-block;color:#b42323;background:#fff0f0;border:1px solid #efb0b0;padding:7px 11px;border-radius:9px;font-weight:900}
+@media(max-width:600px){.slider-labels small{font-size:11px}.drag-item,.check-row{font-size:15px}}
+
+.timer{transition:transform .12s ease,box-shadow .12s ease}
+.timer.countdown-hot{box-shadow:0 0 0 5px rgba(239,68,68,.16)}
+.drop-zone{transition:.15s ease}
+.drop-zone:hover{border-color:#2878ff;background:#eef5ff}
+.drag-item:hover{border-color:#2878ff;transform:translateY(-1px)}
+.small-submit{min-width:150px}
+
+.arrange-list{display:grid;gap:10px;margin:12px 0 16px}
+.arrange-row{display:grid;grid-template-columns:42px 1fr 44px 44px;align-items:center;gap:10px;padding:13px 14px;border:2px solid #d9e2ee;border-radius:13px;background:#fff}
+.arrange-number{width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#eef4ff;color:#2458c5;font-weight:900}
+.arrange-text{font-size:17px;font-weight:800}
+.move-btn{width:42px;height:40px;border:1px solid #cdd8e6;border-radius:10px;background:#f8fbff;font-size:20px;font-weight:900;cursor:pointer}
+.move-btn:hover:not(:disabled){background:#eaf2ff;border-color:#2878ff}
+.move-btn:disabled{opacity:.35;cursor:not-allowed}
+
+.sequence-grid,.match-grid,.memory-grid,.yn-grid,.sort-list,.tap-board{display:grid;gap:12px}
+.sequence-grid,.match-grid,.memory-grid{grid-template-columns:repeat(2,1fr)}
+.sequence-card,.match-card,.memory-card,.yn-card,.sort-card,.tap-target{padding:18px;border:2px solid #d8e1ed;border-radius:14px;background:#fff;font-size:16px;font-weight:800;cursor:pointer}
+.sequence-card span{display:block;margin-top:6px}
+.sequence-card.selected,.match-card.selected,.yn-card.selected,.sort-card.selected,.tap-target.selected{border-color:#2878ff;background:#eef5ff}
+.memory-card{min-height:90px;font-size:30px}
+.memory-card span{font-size:16px}
+.yn-grid{grid-template-columns:1fr 1fr}
+.sort-card{text-align:left}
+.tap-board{grid-template-columns:repeat(2,1fr)}
+.match-clue{padding:14px;background:#f7f9fc;border-radius:12px;margin-bottom:12px;font-weight:700}
+
+.match-pairs{display:grid;gap:12px}
+.match-pair{display:grid;grid-template-columns:180px 1fr;gap:12px;align-items:center;padding:14px;border:2px solid #dce4ef;border-radius:13px;background:#fff}
+.match-pair select{padding:12px;border:1px solid #ccd7e5;border-radius:10px;font-size:15px;background:#fff}
+@media(max-width:600px){.match-pair{grid-template-columns:1fr}}
 </style>
 </head><body><nav class="tabs"><div class="tab-group"><button class="tab active" data-mode="quiz">🧠 Quiz (10)</button><button class="tab" data-mode="puzzles">🧩 Puzzles (10)</button><button class="tab" data-mode="rapid">⚡ Rapid Fire</button></div><button class="sound" id="sound">🔊 Sound On</button></nav><main class="wrap"><section id="quiz" class="card"></section><section id="puzzles" class="card" style="display:none"></section><section id="rapid" class="card" style="display:none"></section></main><script>
-const svg=(kind,a,b)=>{let shapes='';if(kind==='robot')shapes='<rect x="85" y="45" width="130" height="100" rx="18" fill="#dbeafe" stroke="#2878ff" stroke-width="7"/><circle cx="125" cy="90" r="10" fill="#2878ff"/><circle cx="175" cy="90" r="10" fill="#2878ff"/><path d="M125 120 Q150 135 175 120" fill="none" stroke="#2878ff" stroke-width="6"/><path d="M150 45V25M150 20v-8" stroke="#2878ff" stroke-width="7"/><circle cx="150" cy="10" r="5" fill="#ffb000"/>';if(kind==='circuit')shapes='<path d="M45 95h55m100 0h55M100 95c0-25 25-40 50-40s50 15 50 40" fill="none" stroke="#2878ff" stroke-width="7"/><circle cx="100" cy="95" r="10" fill="#fff" stroke="#2878ff" stroke-width="6"/><circle cx="200" cy="95" r="10" fill="#fff" stroke="#2878ff" stroke-width="6"/><path d="M120 145h60" stroke="#172033" stroke-width="10"/><path d="M140 130v30m20-30v30" stroke="#ff5b5b" stroke-width="5"/>';if(kind==='sensor')shapes='<rect x="65" y="45" width="170" height="105" rx="15" fill="#e9fff7" stroke="#00a878" stroke-width="7"/><circle cx="115" cy="98" r="25" fill="#fff" stroke="#00a878" stroke-width="6"/><path d="M155 78h55M155 98h55M155 118h35" stroke="#00a878" stroke-width="8" stroke-linecap="round"/><path d="M115 55V25" stroke="#00a878" stroke-width="7"/>';if(kind==='resistor')shapes='<path d="M30 105h55l15-25 25 50 25-50 25 50 15-25h55" fill="none" stroke="#2878ff" stroke-width="7"/><path d="M105 55v100M130 55v100M155 55v100" stroke="#ff7a00" stroke-width="9"/>';return 'data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 190"><rect width="300" height="190" rx="18" fill="${a||'#f7faff'}"/>${shapes}<text x="150" y="178" text-anchor="middle" font-family="Arial" font-size="13" fill="#5c677a">${b||''}</text></svg>`)};
+let audioOn=true, audioCtx=null;
+function getAudio(){
+  if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+  if(audioCtx.state==='suspended') audioCtx.resume();
+  return audioCtx;
+}
+function beep(freq=700,duration=.12,type='sine',volume=.16){
+  if(!audioOn)return;
+  try{
+    const c=getAudio(),o=c.createOscillator(),g=c.createGain();
+    o.type=type;o.frequency.value=freq;
+    g.gain.setValueAtTime(volume,c.currentTime);
+    g.gain.exponentialRampToValueAtTime(.001,c.currentTime+duration);
+    o.connect(g);g.connect(c.destination);o.start();o.stop(c.currentTime+duration);
+  }catch(e){}
+}
+function sfx(kind){
+  if(!audioOn)return;
+  if(kind==='correct'){beep(880,.12,'sine',.25);setTimeout(()=>beep(1175,.18,'sine',.25),90)}
+  else if(kind==='wrong'){beep(220,.18,'sawtooth',.25);setTimeout(()=>beep(165,.22,'sawtooth',.22),120)}
+  else if(kind==='tick'){beep(1050,.11,'square',.52)}
+  else if(kind==='countdown'){
+    beep(700,.16,'square',.42);
+    setTimeout(()=>beep(900,.16,'square',.46),180);
+    setTimeout(()=>beep(1150,.24,'square',.52),360);
+  }
+  else if(kind==='timeup'){
+    beep(180,.30,'sawtooth',.50);
+    setTimeout(()=>beep(140,.38,'sawtooth',.45),190);
+    setTimeout(()=>beep(110,.42,'sawtooth',.40),430);
+  }
+  else if(kind==='start'){beep(660,.12,'sine',.30);setTimeout(()=>beep(880,.16,'sine',.32),100)}
+  else if(kind==='next'){beep(740,.1,'sine',.25);setTimeout(()=>beep(980,.12,'sine',.28),90)}
+  else if(kind==='win'){beep(660,.12,'sine',.28);setTimeout(()=>beep(880,.12,'sine',.30),110);setTimeout(()=>beep(1100,.2,'sine',.34),220)}
+  else beep(600,.08,'sine',.25);
+}
+
+const svg=(kind,a,b)=>{let shapes='';if(kind==='robot')shapes='<rect x="85" y="45" width="130" height="100" rx="18" fill="#dbeafe" stroke="#2878ff" stroke-width="7"/><circle cx="125" cy="90" r="10" fill="#2878ff"/><circle cx="175" cy="90" r="10" fill="#2878ff"/><path d="M125 120 Q150 135 175 120" fill="none" stroke="#2878ff" stroke-width="6"/><path d="M150 45V25M150 20v-8" stroke="#2878ff" stroke-width="7"/><circle cx="150" cy="10" r="5" fill="#ffb000"/>';if(kind==='circuit')shapes='<path d="M45 95h55m100 0h55M100 95c0-25 25-40 50-40s50 15 50 40" fill="none" stroke="#2878ff" stroke-width="7"/><circle cx="100" cy="95" r="10" fill="#fff" stroke="#2878ff" stroke-width="6"/><circle cx="200" cy="95" r="10" fill="#fff" stroke="#2878ff" stroke-width="6"/><path d="M120 145h60" stroke="#172033" stroke-width="10"/><path d="M140 130v30m20-30v30" stroke="#ff5b5b" stroke-width="5"/>';if(kind==='sensor')shapes='<rect x="65" y="45" width="170" height="105" rx="15" fill="#e9fff7" stroke="#00a878" stroke-width="7"/><circle cx="115" cy="98" r="25" fill="#fff" stroke="#00a878" stroke-width="6"/><path d="M155 78h55M155 98h55M155 118h35" stroke="#00a878" stroke-width="8" stroke-linecap="round"/><path d="M115 55V25" stroke="#00a878" stroke-width="7"/>';if(kind==='resistor')shapes='<path d="M30 105h55l15-25 25 50 25-50 25 50 15-25h55" fill="none" stroke="#2878ff" stroke-width="7"/><path d="M105 55v100M130 55v100M155 55v100" stroke="#ff7a00" stroke-width="9"/>';if(kind==='obstacle')shapes='<rect x="55" y="55" width="120" height="85" rx="20" fill="#dbeafe" stroke="#2878ff" stroke-width="7"/><circle cx="90" cy="95" r="12" fill="#2878ff"/><circle cx="140" cy="95" r="12" fill="#2878ff"/><path d="M180 70h45M180 95h55M180 120h45" stroke="#00a878" stroke-width="8" stroke-linecap="round"/><path d="M235 70l25 25-25 25" fill="none" stroke="#ef8b2c" stroke-width="7"/><path d="M45 35l-18-18M45 155l-18 18M255 35l18-18M255 155l18 18" stroke="#ef8b2c" stroke-width="6" stroke-linecap="round"/>';return 'data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 190"><rect width="300" height="190" rx="18" fill="${a||'#f7faff'}"/>${shapes}<text x="150" y="178" text-anchor="middle" font-family="Arial" font-size="13" fill="#5c677a">${b||''}</text></svg>`)};
 const quiz=[
 ['An embedded system is best described as a computer that…',[['robot','is built into a device to perform a specific job'],['sensor','is always a full desktop computer'],['circuit','only works when connected to the internet'],['resistor','is used only for playing games']],'A','mcq'],
 ['A robot detects a wall, processes the information, and then stops its motor. Which sequence best matches the idea?',[['sensor','Sense → control → act'],['robot','Act → sense → forget'],['circuit','Resistor → LED → battery'],['resistor','Motor → resistor → sensor']],'A','mcq'],
@@ -110,18 +257,19 @@ const quiz=[
 ['Before powering a newly built circuit, what should a careful student do first?',[['circuit','Check the connections and component ratings'],['robot','Touch every connection to test it'],['sensor','Skip checking and power it immediately'],['resistor','Remove every resistor']],'A','mcq'],
 ['Fill in the blank: A component that opposes the flow of electric charge is a ________.',[['resistor','resistor'],['sensor','sensor'],['motor','motor'],['battery','battery']],'A','blank']
 ];
-const imgMap={robot:'robot',circuit:'circuit',sensor:'sensor',resistor:'resistor'};
-let qi=0,chosen=null,score=0,quizState=[];
+const imgMap={robot:'robot',circuit:'circuit',sensor:'sensor',resistor:'resistor',obstacle:'obstacle'};
+let qi=0,chosen=null,score=0,quizState=[],quizAnswers=[];
 function renderQuiz(){
  const el=document.querySelector('#quiz');
  if(qi>=quiz.length){
-   el.innerHTML=`<div class="result"><div class="score">${score}/10</div><h2>${score>=8?'🏆 Engineering Master!':score>=5?'🚀 Great work!':'🔧 Keep experimenting!'}</h2><p>You completed the mixed concept challenge.</p><button class="btn primary" onclick="qi=0;score=0;quizState=[];renderQuiz();sfx('start')">Play Again</button></div>`;
+   const attempted=quizState.filter(v=>v!==undefined).length;
+   const unanswered=quiz.length-attempted;
+   el.innerHTML=`<div class="result"><div class="score">${score}/10</div><h2>${score>=8?'🏆 Engineering Master!':score>=5?'🚀 Great work!':'🔧 Keep experimenting!'}</h2><p>You completed the quiz. Correct answers: ${score} &nbsp;•&nbsp; Unanswered: ${unanswered}</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px"><button class="btn secondary" onclick="showQuizReview()">📋 Review Answers</button><button class="btn primary" onclick="qi=0;score=0;quizState=[];quizAnswers=[];renderQuiz();sfx('start')">Play Again</button></div></div>${showQuizReview()}</div>`;
    sfx('win');
    return
  }
  const [q,opts,ans,type]=quiz[qi];
  chosen=null;
- quizState=quizState||[];
  const badge=type==='visual'?'VISUAL CHALLENGE':type==='blank'?'FILL IN THE BLANK':'MULTIPLE CHOICE';
  const body=type==='blank'
  ? `<div class="fill-blank-wrap"><input id="blankInput" autocomplete="off" placeholder="Type your answer…"><button class="btn secondary" id="checkBlank">Check</button></div>`
@@ -147,7 +295,7 @@ function renderQuiz(){
        <div class="feedback" id="fb"></div>
        <div class="actions">
          <button class="btn secondary" onclick="if(qi>0){qi--;renderQuiz();sfx('click')}">← Back</button>
-         <button class="btn primary" id="next" style="display:none">${qi===9?'Finish Quiz':'Next Question  →'}</button>
+         <button class="btn primary" id="next">${qi===9?'Finish Quiz':'Next Question →'}</button>
        </div>
      </div>
    </div>
@@ -167,28 +315,40 @@ function renderQuiz(){
  <div class="quiz-footer"><span>🎉 Answer the question, see the result, then click Next to continue!</span><span>🔊 Sound effects on</span></div>`;
 
  function showResult(isCorrect){
+   // Only score the question once. Going Next without answering leaves it undefined.
+   if(quizState[qi]!==undefined) return;
    quizState[qi]=isCorrect;
+   if(type==='blank'){
+     quizAnswers[qi]=(document.querySelector('#blankInput')?.value||'').trim();
+   }else{
+     quizAnswers[qi]=chosen||'';
+   }
    const fb=document.querySelector('#fb');
    const next=document.querySelector('#next');
    document.querySelectorAll('.opt').forEach(x=>x.disabled=true);
+   if(type==='blank'){
+     const inp=document.querySelector('#blankInput');
+     const check=document.querySelector('#checkBlank');
+     if(inp)inp.disabled=true;
+     if(check)check.disabled=true;
+   }
    if(isCorrect){
      score++;
      const selectedButton=document.querySelector('.opt.selected');
      if(selectedButton) selectedButton.classList.add('correct-option');
-     fb.innerHTML='<strong>🎉 Correct!</strong><br>Excellent! You spotted the engineering idea.';
+     fb.innerHTML='<strong>✅ Correct answer!</strong><br>Great job!';
      fb.style.display='block'; fb.style.background='#effcf4'; fb.style.borderColor='#b9e5c7'; fb.style.color='#166b39';
      sfx('correct');
    }else{
-     const correctLabel=opts.find(x=>x[0]===ans)?.[1]||'the correct concept';
-     fb.innerHTML='<strong>💡 Not quite!</strong><br>That’s not the right answer.';
+     const correctIndex=ans.charCodeAt(0)-65;
+     const correctLabel=opts[correctIndex]?.[1]||ans;
+     fb.innerHTML='<strong>❌ Wrong answer!</strong><br><strong>Correct answer: '+correctLabel+'</strong>';
      fb.style.display='block'; fb.style.background='#fff4f4'; fb.style.borderColor='#f1b5b5'; fb.style.color='#c23b3b';
      const correctButton=document.querySelector('.opt[data-v="'+ans+'"]');
      if(correctButton) correctButton.classList.add('correct-option');
-     fb.insertAdjacentHTML('afterend','<div class="correct-answer">✓ Correct Answer: '+correctLabel+'</div>');
+     
      sfx('wrong');
    }
-   next.style.display='inline-block';
-   next.onclick=()=>{qi++;renderQuiz();sfx('next')};
    renderQuestionStatus();
  }
  function renderQuestionStatus(){
@@ -201,13 +361,15 @@ function renderQuiz(){
      b.textContent=st===true?'✓':st===false?'✕':String(i+1);
    });
  }
+ document.querySelector('#next').onclick=()=>{
+   if(qi<quiz.length){ qi++; renderQuiz(); sfx('next'); }
+ };
  if(type==='blank'){
    document.querySelector('#checkBlank').onclick=()=>{
      const v=(document.querySelector('#blankInput').value||'').trim().toLowerCase();
      if(!v){sfx('error');document.querySelector('#blankInput').focus();return}
-     const accepted=(opts.find(x=>x[0]===ans)?.[1]||'').toLowerCase();
-     document.querySelector('#blankInput').disabled=true;
-     document.querySelector('#checkBlank').disabled=true;
+     const correctIndex=ans.charCodeAt(0)-65;
+     const accepted=(opts[correctIndex]?.[1]||'').trim().toLowerCase();
      showResult(v===accepted);
    };
    document.querySelector('#blankInput').addEventListener('keydown',e=>{
@@ -215,31 +377,63 @@ function renderQuiz(){
    });
  }else{
    document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{
-     if(b.disabled)return;
+     if(b.disabled || quizState[qi]!==undefined)return;
      chosen=b.dataset.v;
      document.querySelectorAll('.opt').forEach(x=>x.classList.remove('selected'));
      b.classList.add('selected');
-     sfx('click');
      showResult(chosen===ans);
    });
  }
 }
+
+function showQuizReview(){
+ const el=document.querySelector('#quiz');
+ const cards=quiz.map(([q,opts,ans,type],i)=>{
+   const correctIndex=ans.charCodeAt(0)-65;
+   const correctLabel=opts[correctIndex]?.[1]||ans;
+   const response=quizAnswers[i];
+   const attempted=response!==undefined && response!=='';
+   const state=quizState[i];
+   const status=state===true
+     ? '<span class="review-status correct">✓ Correct</span>'
+     : state===false
+       ? '<span class="review-status wrong">✕ Wrong</span>'
+       : '<span class="review-status unanswered">○ Not Attempted</span>';
+   const chosenText=(type==='blank')
+     ? (attempted ? response : 'Not answered')
+     : (attempted ? ((opts[response.charCodeAt(0)-65]?.[1])||response) : 'Not answered');
+   return `<div class="review-card">
+     <div class="review-head"><strong>Question ${i+1}</strong>${status}</div>
+     <div class="review-question">${q}</div>
+     <div class="review-line"><span>Your answer:</span><strong>${chosenText}</strong></div>
+     <div class="review-line correct-line"><span>Correct answer:</span><strong>${correctLabel}</strong></div>
+   </div>`;
+ }).join('');
+ return `<div class="review-section">
+   <div class="review-title">
+     <div><div class="quiz-type-badge">QUIZ REVIEW</div><h2>📋 Review Your Answers</h2><p>Check all your answers after completing the quiz.</p></div>
+   </div>
+   <div class="review-list">${cards}</div>
+ </div>`;
+}
 function goQuestion(n){
  if(n===qi)return;
+ // A question can be revisited only if it has already been attempted.
+ // Unanswered questions remain unanswered and do not affect the score.
  if(quizState && quizState[n]!==undefined){qi=n;renderQuiz();sfx('click')}
 }
 
 const puzzles=[
-['Circuit Detective','An LED circuit is built, but the LED should not be connected directly to the power source. Which build is the sensible choice?',['Power → LED → resistor → return','Power → resistor → LED → return','Power → motor only','Power → sensor only'],1,'circuit'],
-['Robot Brain','A small robot must sense an obstacle, decide what to do, then move. Which chain makes the most sense?',['Motor → sensor → decision','Sensor → control system → motor','Resistor → battery → sensor','LED → motor → battery'],1,'robot'],
-['Smart Device Spotter','Which object is the best example of a device with an embedded computer doing a specific job?',['Microwave controller','Blank notebook','Wooden ruler','Water bottle'],0,'sensor'],
-['Resistor Mission','You need to identify the component whose job is to oppose/control current in a circuit. Pick it.',['Resistor','Sensor','Motor','Antenna'],0,'resistor'],
-['Voltage Detective','Which description matches voltage most closely in the workshop?',['Electrical push','Charge flow','Opposition to flow','A stored program'],0,'circuit'],
-['Current Detective','Which description matches current?',['Electrical push','Flow of electric charge','Resistance value','Robot instruction'],1,'circuit'],
-['Safety Scout','Which action is the safest classroom habit when working with circuits?',['Connect everything immediately','Check the circuit before powering it','Touch bare connections while powered','Ignore component ratings'],1,'robot'],
-['Color-Code Crack','A resistor has colored bands. What are you trying to decode?',['Resistance value','Robot name','Sensor location','Motor direction'],0,'resistor'],
-['Creator Mindset','The workshop says students should become creators rather than only users. Which action fits that idea?',['Build and test a smart device','Only watch videos','Avoid circuits','Never change a design'],0,'robot'],
-['Find the Missing Role','A smart robot can move but cannot react to its surroundings. Which role is most likely missing?',['Sensor','Resistor','LED indicator only','Battery label'],0,'sensor']
+['Creator Mission 🤖','Your workshop goal is to become a CREATOR, not just a user. Arrange these workshop ideas from understanding to building.',['Understand how devices work','Work with sensors, LEDs & motors','Build robots & smart machines','Solve real-world problems'],[0,1,2,3],'shuffle'],
+['Safety Squad 🛡️','Which TWO choices belong to basic safety when handling circuits?',['Treat exposed connections casually','Handle circuits carefully','Ignore safe handling','Keep attention on the circuit'],[1,3],'multi'],
+['Match the Three ⚡','Match each electrical idea with the meaning used in the workshop.',['Voltage = Push','Current = Flow of electric charge','Resistance = Opposition to current'],[0,1,2],'match'],
+['Embedded or Normal? 💻','Which description matches an embedded system?',['A computer used for every possible task','A device with no specific purpose','A screen used only for entertainment','A computer built inside a device to do a specific job'],3,'slider'],
+['Circuit Choice 🎯','A simple circuit needs a complete path for electric charge to flow. Which setup best represents a complete circuit?',['Open switch with a broken path','Disconnected battery and LED','Connected battery, closed switch and LED','LED with no power source'],2,'scenario'],3,'memory'],
+['Ohm’s Law Detective 🔎','The workshop introduces V = IR. Is this statement correct: V represents Voltage?',['NO','YES'],1,'yesno'],
+['Circuit Builder 🔌','Put these ideas into a sensible learning order before working with a circuit.',['What is a circuit?','Understand voltage, current and resistance','Learn why a resistor is needed','Use safe circuit practices'],[0,1,2,3],'sort'],
+['Spot the Resistor 🎯','You are learning why a resistor matters in an LED circuit. Tap the component you would investigate.',['Resistor','LED','Motor','Sensor'],0,'tap'],
+['Color-Code Challenge 🌈','A resistor has a “secret code” made from colors. Which workshop topic should you use to identify it?',['Resistor color code','Embedded system','4-DOF robotic arm','Smart device'],0,'sequence'],
+['Final Workshop Build 🧩','Your workshop ends with building a 4-DOF robotic arm. Drag the most relevant set of components from the choices into the answer box.',['Only a web browser','Only a keyboard and monitor','Sensors, LEDs & motors','Only a speaker'],2,'drag']
 ];
 function puzzleVisual(title){
  const t=title.toLowerCase();
@@ -252,38 +446,329 @@ function puzzleVisual(title){
  if(t.includes('safety')) return `<svg viewBox="0 0 700 180" class="puzzle-svg" aria-label="circuit safety"><rect width="700" height="180" rx="18" fill="#f7fbff"/><path d="M350 25l70 25v45c0 35-28 57-70 70-42-13-70-35-70-70V50z" fill="#dbeafe" stroke="#2878ff" stroke-width="5"/><path d="M350 58v50" stroke="#2878ff" stroke-width="9"/><circle cx="350" cy="125" r="6" fill="#2878ff"/><text x="95" y="112" font-size="54">🔌</text><text x="555" y="112" font-size="54">🛡️</text></svg>`;
  return `<svg viewBox="0 0 700 180" class="puzzle-svg" aria-label="robotics"><rect width="700" height="180" rx="18" fill="#f7fbff"/><text x="350" y="112" text-anchor="middle" font-size="82">🤖</text></svg>`;
 }
-function renderPuzzles(){
- document.querySelector('#puzzles').innerHTML=`<h2>🧩 Engineering Puzzle Lab</h2><p class="small">Solve all 10. No heavy calculations — just smart decisions.</p><div class="puzzle-grid">${puzzles.map((p,i)=>`<div class="puzzle"><div class="puzzle-visual">${puzzleVisual(p[0])}</div><h3>${i+1}. ${p[0]}</h3><p>${p[1]}</p><div class="choices">${p[2].map((x,j)=>`<button class="chip" onclick="puzzlePick(${i},${j},this)">${x}</button>`).join('')}</div><div class="small" id="pf${i}" style="margin-top:12px"></div></div>`).join('')}</div>`
-}
-function puzzlePick(i,j,b){
- const p=puzzles[i],fb=document.querySelector('#pf'+i);
- document.querySelectorAll('#puzzles .puzzle')[i].querySelectorAll('.chip').forEach(x=>x.disabled=true);
- if(j===p[3]){fb.innerHTML='<strong>🎉 Correct!</strong><br>Excellent engineering choice.';fb.style.color='#138a52';sfx('correct')}
- else{fb.innerHTML='<strong>💡 Not quite!</strong><br>Think about the job of each component.';fb.style.color='#d34d4d';sfx('wrong')}
+let pi=0,puzzleState=Array(10).fill(null),puzzleAnswers=Array(10).fill(null);
+
+
+const puzzleModes=['shuffle','multi','match','slider','memory','yesno','sort','tap','sequence','drag'];
+let puzzleInput=null;
+
+function puzzleModeMarkup(p){
+ const mode=puzzleModes[pi];
+ const choices=p[2];
+
+ if(mode==='shuffle'){
+   if(!Array.isArray(puzzleInput)) puzzleInput=[2,0,3,1];
+   return `<div class="interaction-label">🔀 SHUFFLE & ARRANGE</div>
+   <p class="interaction-help">Use ↑ and ↓ to put the ideas in the best order.</p>
+   <div class="arrange-list">${puzzleInput.map((idx,pos)=>`
+    <div class="arrange-row"><span class="arrange-number">${pos+1}</span><span class="arrange-text">${choices[idx]}</span>
+    <button class="move-btn" onclick="moveArrange(${pos},-1)" ${pos===0?'disabled':''}>↑</button>
+    <button class="move-btn" onclick="moveArrange(${pos},1)" ${pos===puzzleInput.length-1?'disabled':''}>↓</button></div>`).join('')}</div>
+   <button class="btn primary small-submit" onclick="submitArrange()">Check Answer</button>`;
+ }
+ if(mode==='multi'){
+   if(!Array.isArray(puzzleInput)) puzzleInput=[];
+   return `<div class="interaction-label">☑️ CHOOSE TWO</div>
+   <p class="interaction-help">Select the TWO choices that best answer the question.</p>
+   <div class="check-list">${choices.map((x,j)=>`<label class="check-row"><input type="checkbox" name="multiCheck" value="${j}" ${puzzleInput.includes(j)?'checked':''} onchange="toggleMulti(this)"><span>${x}</span></label>`).join('')}</div>
+   <button class="btn primary small-submit" onclick="submitMulti()">Check Answer</button>`;
+ }
+ if(mode==='match'){
+   return `<div class="interaction-label">🔗 MATCH IT</div>
+   <p class="interaction-help">Match each term with its workshop meaning.</p>
+   <div class="match-pairs">
+    ${choices.map((x,j)=>`<div class="match-pair"><strong>${x.split(' = ')[0]}</strong><select id="match${j}"><option value="">Choose meaning</option>${choices.map((y,k)=>`<option value="${k}">${y.split(' = ')[1]||y}</option>`).join('')}</select></div>`).join('')}
+   </div>
+   <button class="btn primary small-submit" onclick="submitMatch()">Check Matches</button>`;
+ }
+ if(mode==='slider'){
+   return `<div class="interaction-label">🎚️ SLIDER</div>
+   <p class="interaction-help">Slide to the description that best fits an embedded system.</p>
+   <div class="slider-wrap"><input id="pSlider" type="range" min="0" max="${choices.length-1}" step="1" value="${puzzleInput===null?0:puzzleInput}" oninput="document.getElementById('sliderValue').textContent=this.valueAsNumber+1">
+   <div class="slider-labels">${choices.map((x,j)=>`<span>${j+1}<small>${x}</small></span>`).join('')}</div>
+   <div class="slider-value">Selected: <b id="sliderValue">${(puzzleInput===null?0:puzzleInput)+1}</b></div></div>
+   <button class="btn primary small-submit" onclick="submitSlider()">Check Answer</button>`;
+ }
+ if(mode==='memory'){
+   return `<div class="interaction-label">🧠 MEMORY FLIP</div>
+   <p class="interaction-help">Flip a card to reveal the concept that best completes the idea.</p>
+   <div class="memory-grid">${choices.map((x,j)=>`<button class="memory-card" onclick="puzzleInput=${j};this.classList.add('flipped');this.innerHTML='<span>${x}</span>';document.querySelectorAll('.memory-card').forEach((b,k)=>{if(k!==${j})b.disabled=true})">?</button>`).join('')}</div>
+   <button class="btn primary small-submit" onclick="submitPuzzle()">Reveal & Check</button>`;
+ }
+ if(mode==='yesno'){
+   return `<div class="interaction-label">👍 YES OR NO</div>
+   <p class="interaction-help">Think about the statement, then choose your answer.</p>
+   <div class="yn-grid"><button class="yn-card" onclick="puzzleInput=0;selectYN(this)">YES</button><button class="yn-card" onclick="puzzleInput=1;selectYN(this)">NO</button></div>
+   <button class="btn primary small-submit" onclick="submitPuzzle()">Check</button>`;
+ }
+ if(mode==='sort'){
+   if(!Array.isArray(puzzleInput)) puzzleInput=choices.map((_,i)=>i);
+   return `<div class="interaction-label">↕️ SORT THE STEPS</div>
+   <p class="interaction-help">Move the steps until they form the most sensible order.</p>
+   <div class="arrange-list">${puzzleInput.map((idx,pos)=>`<div class="arrange-row"><span class="arrange-number">${pos+1}</span><span class="arrange-text">${choices[idx]}</span><button class="move-btn" onclick="moveArrange(${pos},-1)" ${pos===0?'disabled':''}>↑</button><button class="move-btn" onclick="moveArrange(${pos},1)" ${pos===puzzleInput.length-1?'disabled':''}>↓</button></div>`).join('')}</div>
+   <button class="btn primary small-submit" onclick="submitArrange()">Check Order</button>`;
+ }
+ if(mode==='tap'){
+   return `<div class="interaction-label">👆 TAP THE BEST CLUE</div>
+   <p class="interaction-help">Tap the item most directly connected to the situation.</p>
+   <div class="tap-board">${choices.map((x,j)=>`<button class="tap-target" onclick="puzzleInput=${j};document.querySelectorAll('.tap-target').forEach((b,k)=>b.classList.toggle('selected',k===${j}))">${x}</button>`).join('')}</div>
+   <button class="btn primary small-submit" onclick="submitPuzzle()">Check</button>`;
+ }
+ if(mode==='sequence'){
+   return `<div class="interaction-label">🎯 PICK THE CLUE</div>
+   <p class="interaction-help">Choose the workshop clue that unlocks this puzzle.</p>
+   <div class="sequence-grid">${choices.map((x,j)=>`<button class="sequence-card" onclick="puzzleInput=${j};document.querySelectorAll('.sequence-card').forEach((b,k)=>b.classList.toggle('selected',k===${j}))">${String.fromCharCode(65+j)}<span>${x}</span></button>`).join('')}</div>
+   <button class="btn primary small-submit" onclick="submitPuzzle()">Check</button>`;
+ }
+ return `<div class="interaction-label">🧩 DRAG & DROP</div>
+ <p class="interaction-help">Drag the best component set into the box.</p>
+ <div class="drag-bank">${choices.map((x,j)=>`<div class="drag-item" draggable="true" ondragstart="dragStart(event,${j})">${x}<span>⠿</span></div>`).join('')}</div>
+ <div class="drop-zone" ondragover="event.preventDefault()" ondrop="dropAnswer(event)">${puzzleInput===null?'<span>Drop your answer here</span>':`<strong>${choices[puzzleInput]}</strong>`}</div>
+ ${puzzleInput!==null?`<button class="btn primary small-submit" onclick="submitPuzzle()">Check</button>`:''}`;
 }
 
-const rapid=['What is the “brain” role in a smart device called?','Which component senses the environment?','What does a resistor oppose?','What does current describe?','What does voltage describe?','What law links voltage, current and resistance?','What do resistor color bands help identify?','Name one real-life embedded system from the workshop context.','What should you do before powering a new circuit?','Are you ready to become a creator?'];let ri=0,rtimer=null,running=false;function renderRapid(){document.querySelector('#rapid').innerHTML=`<div class="rapid"><h2>⚡ Rapid Fire</h2><p>10 lightning questions • 30 seconds</p><div class="timer" id="timer">30</div><div class="rapidbox"><h2 id="rq">Press Start!</h2><button class="btn primary" id="startRapid">Start Round</button><p class="small" id="rmsg">Type or say your answer with your team, then tap Next.</p><button class="btn secondary" id="rnext" style="display:none">Next ⚡</button></div></div>`;document.querySelector('#startRapid').onclick=startRapid;document.querySelector('#rnext').onclick=nextRapid}function startRapid(){ri=0;running=true;document.querySelector('#startRapid').style.display='none';document.querySelector('#rnext').style.display='inline-block';document.querySelector('#rq').textContent=rapid[ri];let t=30;document.querySelector('#timer').textContent=t;sfx('start');clearInterval(rtimer);rtimer=setInterval(()=>{t--;document.querySelector('#timer').textContent=t;if(t<=5)sfx('tick');if(t<=0){clearInterval(rtimer);running=false;sfx('wrong');document.querySelector('#rmsg').textContent='⏰ Time! Restart for another round.'}},1000)}function nextRapid(){if(!running)return;ri++;if(ri>=rapid.length){clearInterval(rtimer);running=false;document.querySelector('#rq').textContent='🎉 Rapid Fire Complete!';document.querySelector('#rnext').style.display='none';sfx('win');return}document.querySelector('#rq').textContent=rapid[ri];sfx('next')}
-let audioOn=true,ctx;
-function ac(){ctx=ctx||new (window.AudioContext||window.webkitAudioContext)();return ctx}
-function tone(freq,dur,type='sine',gain=.05,delay=0){
- if(!audioOn)return;
- const c=ac(),o=c.createOscillator(),g=c.createGain();
- g.gain.setValueAtTime(.0001,c.currentTime+delay);
- g.gain.exponentialRampToValueAtTime(gain,c.currentTime+delay+.01);
- g.gain.exponentialRampToValueAtTime(.0001,c.currentTime+delay+dur);
- o.type=type;o.frequency.value=freq;o.connect(g);g.connect(c.destination);
- o.start(c.currentTime+delay);o.stop(c.currentTime+delay+dur+.03)
+function renderPuzzles(){
+ const p=puzzles[pi];
+ const state=puzzleState[pi];
+ const answer=puzzleAnswers[pi];
+ const correctText=(puzzleModes[pi]==='match')
+   ? p[3].map(i=>p[2][i]).join(' | ')
+   : (Array.isArray(p[3]) ? p[3].map(i=>p[2][i]).join(' → ') : p[2][p[3]]);
+ const yourPuzzleAnswer=Array.isArray(answer)
+   ? (puzzleModes[pi]==='match'
+      ? answer.map((v,j)=>v>=0?(p[2][j].split(' = ')[0]+' → '+(p[2][v].split(' = ')[1]||p[2][v])):'Not selected').join(' | ')
+      : answer.map(i=>p[2][i]).join(' → '))
+   : (answer===null?'Not attempted':p[2][answer]);
+
+ document.querySelector('#puzzles').innerHTML=`
+ <div class="puzzle-page">
+   <div class="puzzle-top">
+     <div>
+       <div class="quiz-type-badge">PUZZLE ${pi+1} OF ${puzzles.length}</div>
+       <div class="puzzle-progress"><span style="width:${((pi+1)/puzzles.length)*100}%"></span></div>
+     </div>
+     <div class="puzzle-counter">${pi+1} / ${puzzles.length}</div>
+   </div>
+   <div class="puzzle-main">
+     <div class="puzzle-content">
+       <div class="puzzle-visual">${puzzleVisual(p[0])}</div>
+       <h2>${pi+1}. ${p[0]}</h2>
+       <p class="puzzle-question">${p[1]}</p>
+
+       ${state===null ? puzzleModeMarkup(p) : `
+         <div class="answered-box">
+           <div class="your-answer"><strong>Your answer:</strong> ${yourPuzzleAnswer}</div>
+           <div class="${state?'answer-good':'answer-bad'}">${state?'✓ Correct!':'✕ Wrong!'}</div>
+           <div class="p-correct-answer"><strong>Correct answer: ${correctText}</strong></div>
+         </div>
+       `}
+
+       ${state!==null ? `
+       <div class="puzzle-feedback ${state?'p-correct':'p-wrong'}">
+         <strong>${state?'Great job!':'Not quite!'}</strong>
+         <div>${state?'You solved this puzzle correctly.':'That answer is not correct.'}</div>
+         <div>Correct answer: <strong>${correctText}</strong></div>
+       </div>` : ''}
+
+       <div class="puzzle-actions">
+         ${pi>0?`<button class="btn secondary" onclick="puzzleBack()">← Back</button>`:'<div></div>'}
+         <button class="btn primary" onclick="puzzleNext()">${pi===puzzles.length-1?'Finish Puzzles':'Next Puzzle →'}</button>
+       </div>
+     </div>
+     <aside class="puzzle-side">
+       <h3>Puzzles</h3>
+       <div class="puzzle-nav">
+         ${puzzles.map((_,i)=>`<button class="${i===pi?'current-puzzle':''} ${puzzleState[i]===true?'done-correct':''} ${puzzleState[i]===false?'done-wrong':''}" onclick="goPuzzle(${i})">${puzzleState[i]===true?'✓':puzzleState[i]===false?'✕':i+1}</button>`).join('')}
+       </div>
+       <div class="puzzle-legend">
+         <div>🟢 Answered Correct</div><div>🔴 Answered Incorrect</div>
+         <div>🔵 Current Puzzle</div><div>⚪ Not Attempted</div>
+       </div>
+     </aside>
+   </div>
+ </div>`;
 }
-function sfx(k){
- if(!audioOn)return;
- if(k==='click'){tone(520,.05,'square',.025)}
- if(k==='correct'){tone(523,.10,'sine',.055);tone(659,.10,'sine',.055,.10);tone(784,.18,'sine',.06,.20);tone(1047,.24,'sine',.045,.34)}
- if(k==='wrong'){tone(300,.11,'triangle',.05);tone(220,.16,'triangle',.045,.12);tone(165,.22,'triangle',.035,.29)}
- if(k==='error'){tone(120,.12,'square',.04);tone(90,.18,'square',.03,.13)}
- if(k==='start'){tone(440,.08,'sine',.04);tone(554,.08,'sine',.04,.09);tone(659,.08,'sine',.04,.18);tone(880,.15,'sine',.045,.27)}
- if(k==='next'){tone(620,.06,'triangle',.035);tone(820,.08,'triangle',.035,.07)}
- if(k==='tick'){tone(950,.045,'square',.025)}
- if(k==='win'){tone(523,.10,'sine',.05);tone(659,.10,'sine',.05,.11);tone(784,.10,'sine',.05,.22);tone(1047,.28,'sine',.055,.33)}
+
+function setCheckAnswer(el){
+ if(el.checked){
+   document.querySelectorAll('input[name="pcheck"]').forEach(x=>{if(x!==el)x.checked=false});
+   puzzleInput=Number(el.value);
+ }else puzzleInput=null;
+}
+function dragStart(e,j){e.dataTransfer.setData('text/plain',j)}
+function dropAnswer(e){
+ e.preventDefault();
+ const j=Number(e.dataTransfer.getData('text/plain'));
+ if(Number.isInteger(j)){puzzleInput=j;renderPuzzles()}
+}
+function dragTouchStart(e,j){puzzleInput=j}
+function moveArrange(pos,dir){
+ if(!Array.isArray(puzzleInput)) return;
+ const next=pos+dir;
+ if(next<0 || next>=puzzleInput.length)return;
+ [puzzleInput[pos],puzzleInput[next]]=[puzzleInput[next],puzzleInput[pos]];
+ renderPuzzles();
+}
+function submitArrange(){
+ if(!Array.isArray(puzzleInput))return;
+ puzzleAnswers[pi]=puzzleInput.slice();
+ puzzleState[pi]=JSON.stringify(puzzleInput)===JSON.stringify(puzzles[pi][3]);
+ sfx(puzzleState[pi]?'correct':'wrong');
+ renderPuzzles();
+}
+function selectYN(el){document.querySelectorAll('.yn-card').forEach(b=>b.classList.remove('selected'));el.classList.add('selected')}
+function toggleMulti(el){
+ if(!Array.isArray(puzzleInput)) puzzleInput=[];
+ const n=Number(el.value);
+ if(el.checked && !puzzleInput.includes(n)) puzzleInput.push(n);
+ if(!el.checked) puzzleInput=puzzleInput.filter(x=>x!==n);
+}
+function submitMulti(){
+ puzzleAnswers[pi]=Array.isArray(puzzleInput)?puzzleInput.slice():[];
+ const target=puzzles[pi][3].slice().sort((a,b)=>a-b);
+ const got=puzzleAnswers[pi].slice().sort((a,b)=>a-b);
+ puzzleState[pi]=JSON.stringify(got)===JSON.stringify(target);
+ sfx(puzzleState[pi]?'correct':'wrong'); renderPuzzles();
+}
+function submitMatch(){
+ const got=[];
+ for(let j=0;j<puzzles[pi][2].length;j++){
+   const el=document.getElementById('match'+j);
+   got.push(el && el.value!=='' ? Number(el.value) : -1);
+ }
+ puzzleAnswers[pi]=got;
+ puzzleState[pi]=got.every((v,j)=>v===j);
+ sfx(puzzleState[pi]?'correct':'wrong'); renderPuzzles();
+}
+function submitSlider(){puzzleInput=Number(document.getElementById('pSlider').value);submitPuzzle()}
+function submitPuzzle(){
+ if(puzzleInput===null || puzzleState[pi]!==null)return;
+ puzzleAnswers[pi]=puzzleInput;
+ puzzleState[pi]=(puzzleInput===puzzles[pi][3]);
+ sfx(puzzleState[pi]?'correct':'wrong');
+ renderPuzzles();
+}
+
+function puzzleNext(){
+ if(pi<puzzles.length-1){pi++;puzzleInput=null;renderPuzzles();sfx('next')}
+ else{
+   const correct=puzzleState.filter(x=>x===true).length;
+   const attempted=puzzleState.filter(x=>x!==null).length;
+   document.querySelector('#puzzles').innerHTML=`
+   <div class="puzzle-finish">
+     <div class="score">${correct}/${puzzles.length}</div>
+     <h2>🧩 Puzzles Complete!</h2>
+     <p>You answered ${attempted} of ${puzzles.length} puzzles.</p>
+     <div class="puzzle-review"><h3>Quick Review</h3>
+       ${puzzles.map((p,i)=>`<div class="p-review ${puzzleState[i]===true?'pr-correct':puzzleState[i]===false?'pr-wrong':'pr-unanswered'}">
+         <strong>${i+1}. ${p[0]}</strong>
+         <span>${puzzleState[i]===true?'✓ Correct':puzzleState[i]===false?'✕ Wrong':'○ Not Attempted'}</span>
+         <small>Correct answer: ${p[2][p[3]]}</small>
+       </div>`).join('')}
+     </div>
+     <button class="btn primary" onclick="pi=0;puzzleState=Array(10).fill(null);puzzleAnswers=Array(10).fill(null);puzzleInput=null;renderPuzzles()">Play Puzzles Again</button>
+   </div>`;
+   sfx('win');
+ }
+}
+function puzzleBack(){if(pi>0){pi--;puzzleInput=puzzleAnswers[pi]??(pi===0?[0,1,2,3]:null);renderPuzzles();sfx('next')}}
+function goPuzzle(n){pi=n;puzzleInput=puzzleAnswers[n]??(n===0?[0,1,2,3]:null);renderPuzzles()}
+
+const rapid=['What is the “brain” role in a smart device called?','Which component senses the environment?','What does a resistor oppose?','What does current describe?','What does voltage describe?','What law links voltage, current and resistance?','What do resistor color bands help identify?','Name one real-life embedded system from the workshop context.','What should you do before powering a new circuit?','Are you ready to become a creator?'];
+const rapidAnswers=['Embedded system','Sensor','Electric current / flow of charge','Flow of electric charge','Electrical push / potential difference','Ohm’s Law','The resistor’s value','A smart device controller','Check the connections and component ratings','Yes — become a creator!'];
+let ri=0,rtimer=null,running=false,rapidSeconds=20;
+
+function renderRapid(){
+ document.querySelector('#rapid').innerHTML=`<div class="rapid">
+   <h2>⚡ Rapid Fire</h2>
+   <p>10 lightning questions • 20 seconds each</p>
+   <div class="timer" id="timer">30</div>
+   <div class="rapidbox">
+     <h2 id="rq">${rapid[ri]||'Press Start!'}</h2>
+     <button class="btn primary" id="startRapid">${ri===0&&!running?'Start Round':'Start Round'}</button>
+     <p class="small" id="rmsg">You have 20 seconds. The countdown will beep during the final 10 seconds.</p>
+     <div id="ranswer"></div>
+     <button class="btn secondary" id="rnext" style="display:none">Next ⚡</button>
+   </div>
+ </div>`;
+ document.querySelector('#startRapid').onclick=startRapid;
+ document.querySelector('#rnext').onclick=nextRapid;
+ if(running){
+   document.querySelector('#startRapid').style.display='none';
+   document.querySelector('#rnext').style.display='inline-block';
+ }
+}
+
+function startRapid(){
+ clearInterval(rtimer);
+ ri=0;
+ running=true;
+ renderRapid();
+ document.querySelector('#startRapid').style.display='none';
+ document.querySelector('#rnext').style.display='inline-block';
+ sfx('start');
+ startRapidTimer();
+}
+
+function startRapidTimer(){
+ clearInterval(rtimer);
+ rapidSeconds=20;
+ const timer=document.querySelector('#timer');
+ if(!timer)return;
+ timer.textContent='20';
+ sfx('countdown');
+
+ rtimer=setInterval(()=>{
+   rapidSeconds--;
+   const t=document.querySelector('#timer');
+   if(t)t.textContent=rapidSeconds;
+
+   if(rapidSeconds>0){
+     sfx('tick');
+     if(t){
+       t.style.transform='scale(1.12)';
+       if(rapidSeconds<=10)t.classList.add('countdown-hot');
+       t.setAttribute('aria-label',rapidSeconds+' seconds remaining');
+     }
+     setTimeout(()=>{if(t)t.style.transform='scale(1)'},150);
+   }
+
+   if(rapidSeconds<=0){
+     clearInterval(rtimer);
+     running=false;
+     sfx('timeup');
+     const msg=document.querySelector('#rmsg');
+     const answer=document.querySelector('#ranswer');
+     const next=document.querySelector('#rnext');
+     if(msg)msg.textContent='⏰ Time is up! Here is the correct answer:';
+     if(answer)answer.innerHTML='<div class="correct-answer">✓ Correct answer: '+rapidAnswers[ri]+'</div>';
+     if(next)next.style.display='inline-block';
+   }
+ },1000);
+}
+
+function nextRapid(){
+ clearInterval(rtimer);
+ ri++;
+ if(ri>=rapid.length){
+   running=false;
+   document.querySelector('#rq').textContent='🎉 Rapid Fire Complete!';
+   document.querySelector('#rmsg').textContent='Great job!';
+   document.querySelector('#ranswer').innerHTML='';
+   document.querySelector('#rnext').style.display='none';
+   document.querySelector('#startRapid').style.display='inline-block';
+   sfx('win');
+   return;
+ }
+ running=true;
+ rapidSeconds=20;
+ document.querySelector('#rq').textContent=rapid[ri];
+ document.querySelector('#rmsg').textContent='You have 20 seconds. The countdown will beep during the final 10 seconds.';
+ document.querySelector('#ranswer').innerHTML='';
+ document.querySelector('#rnext').style.display='inline-block';
+ document.querySelector('#timer').textContent='20';
+ sfx('next');
+ startRapidTimer();
 }
 
 document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));t.classList.add('active');let m=t.dataset.mode;['quiz','puzzles','rapid'].forEach(x=>document.querySelector('#'+x).style.display=x===m?'block':'none');sfx('click')});document.querySelector('#sound').onclick=()=>{audioOn=!audioOn;document.querySelector('#sound').textContent=audioOn?'🔊 Sound On':'🔇 Sound Off';if(audioOn)sfx('start')};renderQuiz();renderPuzzles();renderRapid();
