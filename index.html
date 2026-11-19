@@ -1,6 +1,7 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Engineering Quiz</title><style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Algorithms &amp; Servo Quiz</title><style>
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:#fff;color:#172033}header{padding:22px 6%;border-bottom:1px solid #e8edf5;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:#fff;z-index:5}.brand{font-weight:900;font-size:22px}.brand span{color:#2878ff}.sound{border:1px solid #dbe3ef;background:#f7f9fc;border-radius:999px;padding:10px 14px;cursor:pointer}.hero{padding:50px 6% 35px;background:linear-gradient(135deg,#f7fbff,#fff);text-align:center}.hero h1{font-size:clamp(32px,6vw,60px);margin:0 0 12px}.hero p{font-size:18px;color:#5c677a}.tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding:22px}.tab{border:0;border-radius:14px;padding:13px 22px;font-weight:800;cursor:pointer;background:#eef4ff;color:#2468d8}.tab.active{background:#2878ff;color:#fff}.wrap{max-width:1050px;margin:auto;padding:20px 20px 70px}.card{border:1px solid #e4e9f2;border-radius:24px;padding:28px;background:#fff;box-shadow:0 12px 35px rgba(30,50,90,.07)}.progress{height:9px;background:#edf1f7;border-radius:9px;overflow:hidden;margin:15px 0 28px}.progress i{display:block;height:100%;background:#2878ff;width:0;transition:.3s}.qtitle{font-size:26px;font-weight:850;line-height:1.25}.options{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:22px}.opt{border:2px solid #e4eaf3;border-radius:18px;padding:0;overflow:hidden;background:#fff;cursor:pointer;text-align:left;transition:.18s}.opt:hover{transform:translateY(-2px);border-color:#8cb8ff}.opt.selected{border-color:#2878ff;box-shadow:0 0 0 3px #dceaff}.opt img{display:block;width:100%;height:145px;object-fit:cover;background:#f5f8fc}.opt b{display:block;padding:15px;font-size:16px}.actions{display:flex;justify-content:space-between;gap:12px;margin-top:25px}.btn{border:0;border-radius:13px;padding:13px 19px;font-weight:800;cursor:pointer}.primary{background:#2878ff;color:#fff}.secondary{background:#edf2f8;color:#26344b}.feedback{margin-top:18px;padding:15px;border-radius:14px;background:#f4f8ff;display:none padding:16px 20px; line-height:1.5; font-size:16px; margin-top:14px;}.puzzle-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.puzzle{border:1px solid #e4e9f2;border-radius:20px;padding:20px}.puzzle h3{margin-top:0}.puzzle .choices{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}.chip{border:1px solid #d7dfeb;background:#f9fbfd;border-radius:12px;padding:10px 13px;cursor:pointer}.chip:hover{border-color:#2878ff}.result{text-align:center;padding:35px}.score{font-size:48px;font-weight:900;color:#2878ff}.rapid{text-align:center}.timer{font-size:58px;font-weight:900;margin:10px}.rapidbox{padding:30px;border-radius:22px;background:#f7faff;border:1px solid #e2ebf8}.small{color:#6a7486;font-size:14px}@media(max-width:700px){.options,.puzzle-grid{grid-template-columns:1fr}.hero{padding-top:35px}.card{padding:20px}.opt img{height:130px}}
-.puzzle-svg{width:100%;height:150px;display:block}.puzzle-visual{border-radius:14px;overflow:hidden;background:#f7fbff}\n</style>
+.puzzle-svg{width:100%;height:150px;display:block}.puzzle-visual{border-radius:14px;overflow:hidden;background:#f7fbff}
+</style>
 <style>
 .quiz-type-badge{
   display:inline-flex;align-items:center;justify-content:center;
@@ -15,7 +16,6 @@
 .fill-blank-wrap input:focus{border-color:#6366f1}
 .visual-option img{max-width:150px;height:100px;object-fit:contain;display:block;margin:0 auto 8px}
 </style>
-<style>.quiz-type-badge{display:inline-flex;padding:7px 12px;border-radius:999px;font-size:.72rem;font-weight:800;letter-spacing:.08em;background:#eef2ff;color:#3730a3;margin-bottom:10px}.fill-blank-wrap{display:flex;gap:10px;align-items:center;justify-content:center;margin:18px 0}.fill-blank-wrap input{width:min(320px,80vw);padding:14px 16px;border:2px solid #cbd5e1;border-radius:14px;font-size:1rem;text-align:center;outline:none}.fill-blank-wrap input:focus{border-color:#6366f1}.visual-option img{max-width:150px;height:100px;object-fit:contain;display:block;margin:0 auto 8px}</style>
 <style>
 .tabs{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #e8edf5;padding:18px 32px;display:flex;align-items:center;justify-content:center}
 .tab-group{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
@@ -246,16 +246,16 @@ function sfx(kind){
 
 const svg=(kind,a,b)=>{let shapes='';if(kind==='robot')shapes='<rect x="85" y="45" width="130" height="100" rx="18" fill="#dbeafe" stroke="#2878ff" stroke-width="7"/><circle cx="125" cy="90" r="10" fill="#2878ff"/><circle cx="175" cy="90" r="10" fill="#2878ff"/><path d="M125 120 Q150 135 175 120" fill="none" stroke="#2878ff" stroke-width="6"/><path d="M150 45V25M150 20v-8" stroke="#2878ff" stroke-width="7"/><circle cx="150" cy="10" r="5" fill="#ffb000"/>';if(kind==='circuit')shapes='<path d="M45 95h55m100 0h55M100 95c0-25 25-40 50-40s50 15 50 40" fill="none" stroke="#2878ff" stroke-width="7"/><circle cx="100" cy="95" r="10" fill="#fff" stroke="#2878ff" stroke-width="6"/><circle cx="200" cy="95" r="10" fill="#fff" stroke="#2878ff" stroke-width="6"/><path d="M120 145h60" stroke="#172033" stroke-width="10"/><path d="M140 130v30m20-30v30" stroke="#ff5b5b" stroke-width="5"/>';if(kind==='sensor')shapes='<rect x="65" y="45" width="170" height="105" rx="15" fill="#e9fff7" stroke="#00a878" stroke-width="7"/><circle cx="115" cy="98" r="25" fill="#fff" stroke="#00a878" stroke-width="6"/><path d="M155 78h55M155 98h55M155 118h35" stroke="#00a878" stroke-width="8" stroke-linecap="round"/><path d="M115 55V25" stroke="#00a878" stroke-width="7"/>';if(kind==='resistor')shapes='<path d="M30 105h55l15-25 25 50 25-50 25 50 15-25h55" fill="none" stroke="#2878ff" stroke-width="7"/><path d="M105 55v100M130 55v100M155 55v100" stroke="#ff7a00" stroke-width="9"/>';if(kind==='obstacle')shapes='<rect x="55" y="55" width="120" height="85" rx="20" fill="#dbeafe" stroke="#2878ff" stroke-width="7"/><circle cx="90" cy="95" r="12" fill="#2878ff"/><circle cx="140" cy="95" r="12" fill="#2878ff"/><path d="M180 70h45M180 95h55M180 120h45" stroke="#00a878" stroke-width="8" stroke-linecap="round"/><path d="M235 70l25 25-25 25" fill="none" stroke="#ef8b2c" stroke-width="7"/><path d="M45 35l-18-18M45 155l-18 18M255 35l18-18M255 155l18 18" stroke="#ef8b2c" stroke-width="6" stroke-linecap="round"/>';return 'data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 190"><rect width="300" height="190" rx="18" fill="${a||'#f7faff'}"/>${shapes}<text x="150" y="178" text-anchor="middle" font-family="Arial" font-size="13" fill="#5c677a">${b||''}</text></svg>`)};
 const quiz=[
-['An embedded system is best described as a computer that…',[['sensor','is always a full desktop computer'],['circuit','only works when connected to the internet'],['robot','is built into a device to perform a specific job'],['resistor','is used only for playing games']],'C','mcq'],
-['A robot detects a wall, processes the information, and then stops its motor. Which sequence best matches the idea?',[['robot','Act → sense → forget'],['circuit','Resistor → LED → battery'],['resistor','Motor → resistor → sensor'],['sensor','Sense → control → act']],'D','mcq'],
-['Which picture shows the part that can detect something in the robot’s surroundings?',[['robot','Motor'],['sensor','Sensor'],['resistor','Resistor'],['circuit','LED circuit']],'B','visual'],
-['Why is a resistor useful when an LED is connected in a circuit?',[['resistor','It helps control the current through the LED'],['sensor','It detects obstacles for the LED'],['robot','It stores the robot program'],['circuit','It makes electricity disappear']],'A','mcq'],
-['Fill in the blank: The flow of electric charge is called ________.',[['voltage','voltage'],['resistance','resistance'],['current','current'],['sensor','sensor']],'C','blank'],
-['Which statement about voltage is the best match for the workshop concept?',[['robot','It is the physical movement of a motor'],['sensor','It is the color printed on a resistor'],['resistor','It is the program inside a robot'],['circuit','It provides the electrical push that can drive charge']],'D','mcq'],
-['A student sees colored bands on a resistor. What are they mainly useful for identifying?',[['robot','The robot’s software version'],['resistor','The resistor’s value'],['sensor','The sensor’s detection range'],['circuit','The battery’s age']],'B','mcq'],
-['Which picture best represents a smart device containing an embedded system?',[['sensor','A microwave controller'],['robot','A wooden ruler'],['circuit','A paper notebook'],['resistor','A plain spoon']],'A','visual'],
-['Before powering a newly built circuit, what should a careful student do first?',[['robot','Touch every connection to test it'],['sensor','Skip checking and power it immediately'],['circuit','Check the connections and component ratings'],['resistor','Remove every resistor']],'C','mcq'],
-['Fill in the blank: A component that opposes the flow of electric charge is a ________.',[['sensor','sensor'],['motor','motor'],['battery','battery'],['resistor','resistor']],'D','blank']
+["An algorithm is like a very detailed recipe. What does it give a computer?",[["robot","A random list of guesses"],["circuit","A step-by-step list of instructions to complete a task"],["resistor","A type of motor"],["sensor","A broken piece of code"]],"B","mcq"],
+["In a program, what does a loop() do?",[["robot","Runs once and then stops forever"],["circuit","Deletes the program"],["resistor","Only draws a flowchart"],["sensor","Keeps repeating the same steps continuously until told to stop"]],"D","mcq"],
+["Which flowchart structure is a straight, top-to-bottom, step-by-step path?",[["robot","Decision structure"],["circuit","Loop structure"],["resistor","Sequence structure"],["sensor","Servo structure"]],"C","mcq"],
+["Fill in the blank: The Decision (IF-THEN-ELSE) structure splits the flow into ________ paths based on a condition.",[["a","one"],["b","two"],["c","ten"],["d","zero"]],"B","blank"],
+["What is the correct order of the Sequence structure in a flowchart?",[["robot","Start → Input → Process → Output → End"],["circuit","Output → Input → Start → End → Process"],["resistor","Process → Start → End → Input → Output"],["sensor","End → Output → Process → Input → Start"]],"A","mcq"],
+["Fill in the blank: The Loop (Iteration) structure directs the flow ________ to repeat a process until a condition changes.",[["a","forward"],["b","sideways"],["c","backward"],["d","nowhere"]],"C","blank"],
+["What is pseudocode?",[["robot","A plain-language outline of the steps of a program, not tied to one language"],["circuit","A virus that damages code"],["resistor","A servo motor setting"],["sensor","A type of error message"]],"A","mcq"],
+["A programming error is commonly called a ________.",[["a","feature"],["b","loop"],["c","flowchart"],["d","bug"]],"D","blank"],
+["Which statement best describes a programming error (bug)?",[["robot","A mistake or fault in code or logic that causes incorrect or unexpected results"],["circuit","A program that always runs perfectly"],["resistor","A shape used in a flowchart"],["sensor","A motor that rotates a shaft"]],"A","mcq"],
+["A servo motor is an actuator used to accurately control which of the following?",[["robot","The color of an LED"],["circuit","The angular position of a shaft"],["resistor","The size of a program"],["sensor","The speed of the internet"]],"B","mcq"]
 ];
 const imgMap={robot:'robot',circuit:'circuit',sensor:'sensor',resistor:'resistor',obstacle:'obstacle'};
 let qi=0,chosen=null,score=0,quizState=[],quizAnswers=[];
@@ -264,7 +264,7 @@ function renderQuiz(){
  if(qi>=quiz.length){
    const attempted=quizState.filter(v=>v!==undefined).length;
    const unanswered=quiz.length-attempted;
-   el.innerHTML=`<div class="result"><div class="score">${score}/10</div><h2>${score>=8?'🏆 Engineering Master!':score>=5?'🚀 Great work!':'🔧 Keep experimenting!'}</h2><p>You completed the quiz. Correct answers: ${score} &nbsp;•&nbsp; Unanswered: ${unanswered}</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px"><button class="btn secondary" onclick="showQuizReview()">📋 Review Answers</button><button class="btn primary" onclick="qi=0;score=0;quizState=[];quizAnswers=[];renderQuiz();sfx('start')">Play Again</button></div></div>${showQuizReview()}</div>`;
+   el.innerHTML=`<div class="result"><div class="score">${score}/10</div><h2>${score>=8?'🏆 Algorithm Master!':score>=5?'🚀 Great work!':'🔧 Keep experimenting!'}</h2><p>You completed the quiz. Correct answers: ${score} &nbsp;•&nbsp; Unanswered: ${unanswered}</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px"><button class="btn secondary" onclick="showQuizReview()">📋 Review Answers</button><button class="btn primary" onclick="qi=0;score=0;quizState=[];quizAnswers=[];renderQuiz();sfx('start')">Play Again</button></div></div>${showQuizReview()}</div>`;
    sfx('win');
    return
  }
@@ -309,7 +309,7 @@ function renderQuiz(){
        <div class="legend-row"><span class="legend-dot blue"></span> Current Question</div>
        <div class="legend-row"><span class="legend-dot"></span> Not Attempted</div>
      </div>
-     <div class="quick-tip"><strong>💡 Quick Tip</strong><br><br>Think about what each component does before choosing your answer.</div>
+     <div class="quick-tip"><strong>💡 Quick Tip</strong><br><br>Think step by step, like an algorithm, before choosing your answer.</div>
    </aside>
  </div>
  <div class="quiz-footer"><span>🎉 Answer the question, see the result, then click Next to continue!</span><span>🔊 Sound effects on</span></div>`;
@@ -424,32 +424,25 @@ function goQuestion(n){
 }
 
 const puzzles=[
-['Creator Mission 🤖','Arrange the workshop journey from learning to building.',['Understand devices','Explore sensors, LEDs & motors','Build smart machines','Solve real problems'],[0,1,2,3],'shuffle'],
-['Safety Squad 🛡️','Choose the TWO safe habits for working with circuits.',['Handle circuits carefully','Keep attention on the circuit','Ignore safe handling','Touch exposed connections'],[0,1],'multi'],
-['Electrical Trio ⚡','Choose the correct meaning for each electrical term.',['Push in an electrical circuit','Flow of electric charge','Opposition to current'],[1,2,0],'flashmatch'],
-['Embedded Systems 💻','Which description best matches an embedded system?',['A computer for every possible task','A device with no specific purpose','A screen used only for entertainment','A computer built inside a device for a specific job'],3,'slider'],
-['Circuit Choice 🎯','Which setup represents a complete circuit?',['Open switch with a broken path','Disconnected battery and LED','Connected battery, closed switch and LED','LED with no power source'],2,'scenario'],
-['Ohm’s Law Detective 🔎','The workshop introduces V = IR. Does V represent Voltage?',['NO','YES'],1,'yesno'],
-['Circuit Learning Order 🔌','Put these learning steps in a sensible order.',['What is a circuit?','Understand voltage, current and resistance','Learn why a resistor is used','Follow safe circuit practices'],[0,1,2,3],'sort'],
-['Resistor Rescue 🦸','An LED needs protection in a circuit. What is the best action?',['Remove every resistor','Connect the LED directly to the source','Ignore the resistor','Add a resistor in the circuit'],3,'scenario'],
-['Color-Code Challenge 🌈','Which workshop topic helps identify a resistor from its colored bands?',['Embedded system','4-DOF robotic arm','Resistor color code','Smart device'],2,'sequence'],
-['Final Robot Mission 🚀','Which set contains components highlighted in the workshop for building smart machines?',['Only a keyboard and monitor','Only a web browser','Sensors, LEDs and motors','Only a speaker'],2,'drag']
+["Algorithm Chef 🍳","Arrange the Sequence structure of a flowchart in the right order.",["Start","Input","Process","Output"],[0,1,2,3],"shuffle"],
+["Algorithm Basics 📋","Choose the TWO statements that describe an algorithm.",["A step-by-step list of instructions","Used to solve a problem or complete a task","Random guesses with no order","A type of motor"],[0,1],"multi"],
+["Servo Motor ⚙️","Slide to the description that best fits a servo motor.",["Stores the program code","Controls the angular position of a shaft accurately","Draws flowcharts","Only prints text"],1,"slider"],
+["Loop Check 🔁","A loop keeps repeating steps until a condition changes or the job is done. True?",["YES","NO"],0,"yesno"],
+["Decision Flow 🔀","Put the steps of a Decision structure in a sensible order.",["Start","Check the condition","Follow one of the two paths","Paths reunite"],[0,1,2,3],"sort"],
+["Pick the Structure 🧭","Which structure splits the program flow into two paths based on a condition?",["Sequence","Decision (IF-THEN-ELSE)","Loop","Pseudocode"],1,"sequence"],
+["Bug Hunter 🐞","Drag the best definition of a programming error into the box.",["A planned feature","A mistake or fault in code that causes wrong or unexpected results","A fast processor","A finished program"],1,"drag"],
+["Loop Direction 🔄","Tap the structure that directs the flow backward.",["Sequence","Decision","Loop (Iteration)","End"],2,"tap"],
+["Pseudocode Order 📝","Arrange this pseudocode in the correct order.",["START","READ number","IF number > 0 THEN PRINT Positive","END"],[0,1,2,3],"shuffle"],
+["Flowchart Structures 📊","Choose the TWO flowchart structures covered in the workshop.",["Sequence","Loop (Iteration)","Servo","Pixel"],[0,1],"multi"]
 ];
 function puzzleVisual(title){
- const t=title.toLowerCase();
- if(t.includes('circuit')) return `<svg viewBox="0 0 700 180" class="puzzle-svg" aria-label="LED circuit"><rect width="700" height="180" rx="18" fill="#f7fbff"/><circle cx="90" cy="90" r="30" fill="#ffd86b"/><text x="90" y="96" text-anchor="middle" font-size="22">🔋</text><path d="M120 90 H245 M455 90 H580" stroke="#2878ff" stroke-width="7"/><rect x="245" y="68" width="80" height="44" rx="8" fill="#f4b942"/><path d="M265 68v44 M285 68v44 M305 68v44" stroke="#8b5a00" stroke-width="5"/><circle cx="410" cy="90" r="27" fill="#ff6b8a"/><path d="M325 90h58 M437 90h18 V140 H90 V120" fill="none" stroke="#2878ff" stroke-width="7"/><text x="410" y="98" text-anchor="middle" font-size="22">💡</text></svg>`;
- if(t.includes('robot brain')) return `<svg viewBox="0 0 700 180" class="puzzle-svg" aria-label="robot sensing and moving"><rect width="700" height="180" rx="18" fill="#f7fbff"/><g transform="translate(260 30)"><rect x="0" y="20" width="180" height="105" rx="28" fill="#dbeafe" stroke="#2878ff" stroke-width="5"/><circle cx="52" cy="70" r="14" fill="#2878ff"/><circle cx="128" cy="70" r="14" fill="#2878ff"/><path d="M55 100 Q90 118 125 100" fill="none" stroke="#2878ff" stroke-width="6"/><path d="M90 20V0" stroke="#2878ff" stroke-width="5"/><circle cx="90" cy="0" r="8" fill="#ffb84d"/><circle cx="-12" cy="150" r="25" fill="#64748b"/><circle cx="192" cy="150" r="25" fill="#64748b"/></g><text x="95" y="45" font-size="42">👁️</text><text x="585" y="45" font-size="42">⚙️</text></svg>`;
- if(t.includes('smart device')) return `<svg viewBox="0 0 700 180" class="puzzle-svg" aria-label="smart appliance"><rect width="700" height="180" rx="18" fill="#f7fbff"/><rect x="215" y="25" width="270" height="130" rx="18" fill="#e2e8f0" stroke="#64748b" stroke-width="5"/><rect x="250" y="55" width="200" height="55" rx="10" fill="#fff"/><circle cx="270" cy="138" r="8" fill="#2878ff"/><circle cx="300" cy="138" r="8" fill="#2878ff"/><text x="350" y="94" text-anchor="middle" font-size="32">🍲</text><text x="70" y="105" font-size="48">🧠</text><text x="585" y="105" font-size="48">⚙️</text></svg>`;
- if(t.includes('resistor')||t.includes('color')) return `<svg viewBox="0 0 700 180" class="puzzle-svg" aria-label="resistor with color bands"><rect width="700" height="180" rx="18" fill="#f7fbff"/><path d="M100 90H245 M455 90H600" stroke="#64748b" stroke-width="8"/><rect x="245" y="55" width="210" height="70" rx="18" fill="#e7d2a4" stroke="#9a7b42" stroke-width="4"/><path d="M290 55v70 M330 55v70 M370 55v70 M410 55v70" stroke-width="15"/><text x="350" y="35" text-anchor="middle" font-size="26">🎨 Resistor</text></svg>`;
- if(t.includes('voltage')) return `<svg viewBox="0 0 700 180" class="puzzle-svg" aria-label="battery voltage"><rect width="700" height="180" rx="18" fill="#f7fbff"/><rect x="280" y="45" width="140" height="90" rx="12" fill="#dbeafe" stroke="#2878ff" stroke-width="5"/><path d="M420 75h20v30h-20" fill="none" stroke="#2878ff" stroke-width="5"/><text x="350" y="103" text-anchor="middle" font-size="34">⚡</text><text x="120" y="105" font-size="50">➕</text><text x="530" y="105" font-size="50">➖</text></svg>`;
- if(t.includes('current')) return `<svg viewBox="0 0 700 180" class="puzzle-svg" aria-label="electric current flow"><rect width="700" height="180" rx="18" fill="#f7fbff"/><path d="M100 90 H600" stroke="#2878ff" stroke-width="8" stroke-linecap="round"/><path d="M190 75l25 15-25 15z M330 75l25 15-25 15z M470 75l25 15-25 15z" fill="#ffb84d"/><text x="350" y="48" text-anchor="middle" font-size="27">Charge Flow →</text></svg>`;
- if(t.includes('safety')) return `<svg viewBox="0 0 700 180" class="puzzle-svg" aria-label="circuit safety"><rect width="700" height="180" rx="18" fill="#f7fbff"/><path d="M350 25l70 25v45c0 35-28 57-70 70-42-13-70-35-70-70V50z" fill="#dbeafe" stroke="#2878ff" stroke-width="5"/><path d="M350 58v50" stroke="#2878ff" stroke-width="9"/><circle cx="350" cy="125" r="6" fill="#2878ff"/><text x="95" y="112" font-size="54">🔌</text><text x="555" y="112" font-size="54">🛡️</text></svg>`;
- return `<svg viewBox="0 0 700 180" class="puzzle-svg" aria-label="robotics"><rect width="700" height="180" rx="18" fill="#f7fbff"/><text x="350" y="112" text-anchor="middle" font-size="82">🤖</text></svg>`;
+ const e=Array.from(title.trim()).slice(-2).join('').trim();
+ return `<svg viewBox="0 0 700 180" class="puzzle-svg" aria-label="puzzle"><rect width="700" height="180" rx="18" fill="#f7fbff"/><text x="350" y="118" text-anchor="middle" font-size="82">${e}</text></svg>`;
 }
 let pi=0,puzzleState=Array(10).fill(null),puzzleAnswers=Array(10).fill(null);
 
 
-const puzzleModes=['shuffle','multi','flashmatch','slider','scenario','yesno','sort','scenario','sequence','drag'];
+const puzzleModes=['shuffle','multi','slider','yesno','sort','sequence','drag','tap','shuffle','multi'];
 let puzzleInput=null;
 
 function puzzleModeMarkup(p){
@@ -502,7 +495,7 @@ function puzzleModeMarkup(p){
    <button class="btn primary small-submit" onclick="submitPuzzle()">Check</button>`;
  }
  if(mode==='sort'){
-   if(!Array.isArray(puzzleInput)) puzzleInput=choices.map((_,i)=>i);
+   if(!Array.isArray(puzzleInput)) puzzleInput=[2,0,3,1];
    return `<div class="interaction-label">↕️ SORT THE STEPS</div>
    <p class="interaction-help">Move the steps until they form the most sensible order.</p>
    <div class="arrange-list">${puzzleInput.map((idx,pos)=>`<div class="arrange-row"><span class="arrange-number">${pos+1}</span><span class="arrange-text">${choices[idx]}</span><button class="move-btn" onclick="moveArrange(${pos},-1)" ${pos===0?'disabled':''}>↑</button><button class="move-btn" onclick="moveArrange(${pos},1)" ${pos===puzzleInput.length-1?'disabled':''}>↓</button></div>`).join('')}</div>
@@ -522,7 +515,7 @@ function puzzleModeMarkup(p){
  }
  return `<div class="interaction-label">🧩 DRAG & DROP</div>
  <p class="interaction-help">Drag the best component set into the box.</p>
- <div class="drag-bank">${choices.map((x,j)=>`<div class="drag-item" draggable="true" ondragstart="dragStart(event,${j})">${x}<span>⠿</span></div>`).join('')}</div>
+ <div class="drag-bank">${choices.map((x,j)=>`<div class="drag-item" draggable="true" ondragstart="dragStart(event,${j})" onclick="puzzleInput=${j};renderPuzzles()">${x}<span>⠿</span></div>`).join('')}</div>
  <div class="drop-zone" ondragover="event.preventDefault()" ondrop="dropAnswer(event)">${puzzleInput===null?'<span>Drop your answer here</span>':`<strong>${choices[puzzleInput]}</strong>`}</div>
  ${puzzleInput!==null?`<button class="btn primary small-submit" onclick="submitPuzzle()">Check</button>`:''}`;
 }
@@ -663,7 +656,7 @@ function puzzleNext(){
        ${puzzles.map((p,i)=>`<div class="p-review ${puzzleState[i]===true?'pr-correct':puzzleState[i]===false?'pr-wrong':'pr-unanswered'}">
          <strong>${i+1}. ${p[0]}</strong>
          <span>${puzzleState[i]===true?'✓ Correct':puzzleState[i]===false?'✕ Wrong':'○ Not Attempted'}</span>
-         <small>Correct answer: ${p[2][p[3]]}</small>
+         <small>Correct answer: ${Array.isArray(p[3])?p[3].map(k=>p[2][k]).join(' → '):p[2][p[3]]}</small>
        </div>`).join('')}
      </div>
      <button class="btn primary" onclick="pi=0;puzzleState=Array(10).fill(null);puzzleAnswers=Array(10).fill(null);puzzleInput=null;renderPuzzles()">Play Puzzles Again</button>
@@ -671,18 +664,18 @@ function puzzleNext(){
    sfx('win');
  }
 }
-function puzzleBack(){if(pi>0){pi--;puzzleInput=puzzleAnswers[pi]??(pi===0?[0,1,2,3]:null);renderPuzzles();sfx('next')}}
-function goPuzzle(n){pi=n;puzzleInput=puzzleAnswers[n]??(n===0?[0,1,2,3]:null);renderPuzzles()}
+function puzzleBack(){if(pi>0){pi--;puzzleInput=puzzleAnswers[pi]??null;renderPuzzles();sfx('next')}}
+function goPuzzle(n){pi=n;puzzleInput=puzzleAnswers[n]??null;renderPuzzles()}
 
-const rapid=['What is the “brain” role in a smart device called?','Which component senses the environment?','What does a resistor oppose?','What does current describe?','What does voltage describe?','What law links voltage, current and resistance?','What do resistor color bands help identify?','Name one real-life embedded system from the workshop context.','What should you do before powering a new circuit?','Are you ready to become a creator?'];
-const rapidAnswers=['Embedded system','Sensor','Electric current / flow of charge','Flow of electric charge','Electrical push / potential difference','Ohm’s Law','The resistor’s value','A smart device controller','Check the connections and component ratings','Yes — become a creator!'];
+const rapid=["What is an algorithm?","What does loop() do?","Name the flowchart structure that is a straight step-by-step path.","What does the Decision (IF-THEN-ELSE) structure do?","Which structure directs the flow backward?","What is pseudocode?","What is a programming error commonly called?","What does a servo motor control?","Give the order of a Sequence structure.","Are you ready to build and debug?"];
+const rapidAnswers=["A step-by-step list of instructions to solve a problem","Repeats steps continuously until told to stop","Sequence structure","Splits the flow into two paths based on a condition","The Loop (Iteration) structure","A plain-language outline of program steps","A bug","The angular position of a shaft","Start → Input → Process → Output → End","Yes — let's go!"];
 let ri=0,rtimer=null,running=false,rapidSeconds=20;
 
 function renderRapid(){
  document.querySelector('#rapid').innerHTML=`<div class="rapid">
    <h2>⚡ Rapid Fire</h2>
    <p>10 lightning questions • 20 seconds each</p>
-   <div class="timer" id="timer">30</div>
+   <div class="timer" id="timer">20</div>
    <div class="rapidbox">
      <h2 id="rq">${rapid[ri]||'Press Start!'}</h2>
      <button class="btn primary" id="startRapid">${ri===0&&!running?'Start Round':'Start Round'}</button>
